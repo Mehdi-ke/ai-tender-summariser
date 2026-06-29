@@ -5,18 +5,9 @@ load_dotenv()
 
 client = anthropic.Anthropic()
 
-tender_text = """
-Project: Refurbishment of Riverside Community Centre, Bristol
-Client: Bristol City Council
-Contract Value: £850,000
-Programme: 24 weeks
-Scope: Strip out and full internal refurbishment including M&E replacement,
-new ceilings, flooring, decoration, and external works. Works to be carried
-out while the building remains partially occupied.
-Submission deadline: 14 days from issue.
-Insurance requirements: £5m public liability, £2m employers liability.
-Liquidated damages: £1,500 per week.
-"""
+filename = input("Enter tender file name (e.g. tender.txt): ")
+with open(filename, "r") as f:
+    tender_text = f.read()
 
 message = client.messages.create(
     model="claude-sonnet-4-6",
