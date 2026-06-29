@@ -31,7 +31,7 @@ Reviewing tenders manually is time-consuming and easy to miss critical details u
 3. Create a `.env` file with your Anthropic API key:
 ANTHROPIC_API_KEY=your-key-here
 
-4. Paste your tender text into the `tender_text` variable in `tender_summary_v1.py`
+4. Usage: Add your tender text to a .txt file and run the script. You will be prompted to enter the filename.
 5. Run:
 ```bash
    python tender_summary_v1.py
